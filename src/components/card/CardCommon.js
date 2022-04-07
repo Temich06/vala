@@ -29,7 +29,7 @@ const CardCommon = ({ description, title, price }) => {
     const navigate = useNavigate()
     return (
         <Box className={classes.root}>
-            <CardActionArea>
+            <CardActionArea onClick={() => navigate('/volunteers-detail')}>
                 <Box className={classes.cardContent}>
                     <Box className={classes.titleBox}>
                         <Typography variant="h6" style={{ color: 'rgba(81, 165, 212, 1)' }}>

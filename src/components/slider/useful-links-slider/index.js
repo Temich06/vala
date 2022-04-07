@@ -44,17 +44,17 @@ const UsefulLinks = () => {
     const array = [
         {
             img: '/image/Group-3691.png',
-            description: 'Правительство Республики Саха (Якутия)',
-            Link: 'https://www.sakha.gov.ru/'
+            description: 'volonter.ru',
+            Link: 'https://volonter.ru/'
         },
         {
-            img: '/image/Group-367(1)2.png',
-            description: 'Министерство здравоохранения Российской Федерации',
-            Link: 'https://minzdrav.gov.ru/'
+            img: 'https://dobro.ru/_next/image?url=https%3A%2F%2Fstorage.yandexcloud.net%2Fdobro-static%2Fprod%2Fimported%2Fpictures%2F011027e7a4f548a9bbd8efcda67ff0fd.jpg&w=640&q=75',
+            description: 'Центр по работе с волонтерами Республики Саха (Якутия)',
+            Link: 'https://dobro.ru/organizations/217/info'
         },
         {
             img: '/image/Group-362(2).png',
-            description: 'Министерство здравоохранения Республики Саха (Якутия)',
+            description: 'Благотворительный фонд "Старость в радость" ',
             Link: 'https://minzdrav.sakha.gov.ru/'
         },
     ]
@@ -64,7 +64,7 @@ const UsefulLinks = () => {
             <Container>
                 <YellowSeparator />
                 <Box style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Typography variant="h4" style={{ marginBottom: 20, color: '#F2A340' }}>Полезные ссылки</Typography>
+                    <Typography variant="h4" style={{ marginBottom: 20, color: '#8DD18C' }}>Полезные ссылки</Typography>
                 </Box>
                 <Slider {...settings} >
                     {array.map((item, index) => (

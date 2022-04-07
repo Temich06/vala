@@ -5,7 +5,7 @@ import { makeStyles, Typography, Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     text: {
-        color: '#F2A340',
+        color: '#8DD18C',
         textAlign: 'center',
         fontWeight: 500,
         lineHeight: 1.08,
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     line: {
         width: 80,
         height: 2,
-        background: '#F2A340',
+        background: '#8DD18C',
         [theme.breakpoints.down('xs')]: {
             width: 50
         },

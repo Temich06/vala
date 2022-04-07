@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        background: `url("/image/Vector57.png")`,
+        background: `url("/image/Vector157.png")`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         color: 'white',
         [theme.breakpoints.down('md')]: {
-            marginTop: 50
+            marginTop: 40
         },
         [theme.breakpoints.down('sm')]: {
             alignItems: 'center',
@@ -55,20 +55,24 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             marginTop: 0
         },
-        marginTop: 60
+        marginTop: 40
     },
     title: {
         color: 'white',
         marginBottom: 20,
         fontStyle: 'normal',
+        textShadow: ' 0px 0px 10px rgba(150, 150, 150, 1);',
         [theme.breakpoints.down('xs')]: {
             fontSize: 35
         },
     },
     description: {
         fontStyle: 'normal',
+        textShadow: ' 0px 0px 10px rgba(150, 150, 150, 1);',
+        paddingRight: 10,
         [theme.breakpoints.down('xs')]: {
-            fontSize: 16
+            fontSize: 16,
+            paddingRight: 0,
         },
     }
 }));
@@ -82,10 +86,10 @@ const StartedBlog = () => {
                 <Grid container className={classes.content}>
                     <Grid item lg={6} sm={11} md={6} xl={6} xs={11} className={classes.infoBlock}>
                         <Typography variant="h3" className={classes.title}>
-                            ПАЛЛИАТИВНАЯ ПОМОЩЬ
+                        Помощь волонтёров
                         </Typography>
                         <Typography variant="h6" className={classes.description}>
-                            Сайт АНО "Комплексный центр медицинского и социального обслуживания населения". Общественный куратор отделения сестринского ухода РКБ№3. Проекты в поддержку развития паллиативной медицинской помощи в Якутии и спецпроекты по донорству.
+                        Волонтёрство – это добровольная безвозмездная деятельность на благо общества и отдельных граждан. Если сформулировать определение не официальными терминами, то волонтерство – это бесплатная работа для того, чтобы помочь всем, кто в этом остро нуждается. Кстати, в 2021 году центр профориентации ПрофГид разработал точный тест на профориентацию. Он сам расскажет вам, какие профессии вам подходят, даст заключение о вашем типе личности и интеллекте.
                         </Typography>
                     </Grid>
                     <Grid item lg={6} sm={11} md={6} xl={6} xs={11} className={classes.img_box}>

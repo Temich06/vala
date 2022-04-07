@@ -80,133 +80,26 @@ export default function Header() {
             href: '/'
         },
         {
-            label: "НОВОСТИ",
-            href: "/news",
-        },
-        {
             label: 'ПРОЕКТЫ',
-            state: setStatusFirst,
+            href: '/home-care-school',
         },
         {
-            label: "ПАЛЛИАТИВНАЯ ПОМОЩЬ",
-            state: setStatusSecond
+            label: 'ПОМОЩЬ',
+            href: '/help',
         },
         {
-            label: "ВОЛОНТЕРАМ",
+            label: "КОНТАКТЫ",
+            href: '/contacts'
+        },
+        {
+            label: "ВОЛОНТЁРАМ",
             href: '/valunteers'
+        },
+        {
+            label: "ВОЛОНТЁРЫ",
+            href: '/your-volunteers'
         }
     ];
-    const menuData = [
-        {
-            status: statusFour,
-            setStatus: setStatusFour,
-            menuElems: [
-                {
-                    label: 'ГЛАВНАЯ',
-                    href: '/about'
-                },
-                {
-                    label: 'НОВОСТИ',
-                    href: '/documents-page'
-                },
-                {
-                    label: 'ПРОЕКТЫ',
-                    href: '/team'
-                },
-                {
-                    label: 'ПАЛЛИАТИВНАЯ ПОМОЩЬ',
-                    href: '/reports'
-                },
-                {
-                    label: 'ВОЛОНТЕРАМ',
-                    href: '/'
-                },
-            ]
-        },
-        {
-            status: statusFirst,
-            setStatus: setStatusFirst,
-            menuElems: [
-                {
-                    label: 'Наши проекты',
-                    href: '/palliative'
-                },
-                {
-                    label: 'Спецпроект по донерству',
-                    href: '/donation'
-                },
-                {
-                    label: 'Проект школа домашнего ухода',
-                    href: '/home-care-school'
-                },
-                {
-                    label: 'Проект по респисной помощи семьям с тяжелобольными пациентами',
-                    href: '/seriouslyIllFamily'
-                },
-                {
-                    label: 'Ресурсный центр поддержки семей с паллиативными пациентами',
-                    href: '/helpPalliative'
-                },
-                {
-                    label: 'Проект "Деменции нет"',
-                    href: '/dementiaNo'
-                },
-            ]
-        },
-        {
-            status: statusSecond,
-            setStatus: setStatusSecond,
-            menuElems: [
-                {
-                    label: 'Отделение сестринского ухода',
-                    href: '/sister-care'
-                },
-                {
-                    label: 'Проект "на связи"',
-                    href: '/project-in-touch'
-                },
-                {
-                    label: 'Новости отделения',
-                    href: '/project-news'
-                },
-            ]
-        },
-        {
-            status: statusThree,
-            setStatus: setStatusThree,
-            style: 40,
-            menuElems: [
-                // {
-                //     label: 'Надежда на будущее',
-                //     href: '/bud-page'
-                // },
-                // {
-                //     label: 'Дар жизни',
-                //     href: '/liver-trans'
-                // },
-                {
-                    label: 'Проект "Школа домашнего ухода"',
-                    href: '/home-care-school'
-                },
-                {
-                    label: 'Проект по респисной помощи семьям с тяжелобольными пациентами',
-                    href: '/seriouslyIllFamily'
-                },
-                {
-                    label: 'Ресурсный центр поддержки семей с паллиативными пациентами',
-                    href: '/helpPalliative'
-                },
-                {
-                    label: 'Проект "Деменции нет"',
-                    href: '/dementiaNo'
-                },
-                {
-                    label: 'Спецпроекты по донорству',
-                    href: '/donation'
-                },
-            ]
-        }
-    ]
     const [state, setState] = useState({
         mobileView: false,
         drawerOpen: false,
@@ -226,12 +119,12 @@ export default function Header() {
     const displayDesktop = () => {
         return (
 
-            <Toolbar>
+    
                 <Container className={toolbar}>
                     {femmecubatorLogo}
                     <div>{getMenuButtons()}</div>
                 </Container>
-            </Toolbar>
+     
         );
     };
     const displayMobile = () => {
@@ -273,11 +166,11 @@ export default function Header() {
         )
     };
     const femmecubatorLogo = (
-        <MenuItem style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer', }} onClick={() => {
+        <MenuItem style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'pointer', }} onClick={() => {
             navigate('/')
         }}>
-            <img src={'/image/Group15.png'} style={{ width: 40, height: 40 }} alt={''} />
-            <Typography style={{ marginLeft: 5, color: 'black' }}>Паллиативная<br /> Помощь</Typography>
+            <img src={'/image/logo.png'} style={{ width: 90, height: 40, objectFit: 'cover' }} alt={''} />
+            <Typography style={{ marginTop: 5, color: '#94DE82' }} variant="body1">Volunteer Activity</Typography>
         </MenuItem>
     );
     const getMenuButtons = () => {
@@ -296,42 +189,14 @@ export default function Header() {
                         </Button>
                     );
                 })}
-                {menuData.map((item, index) => (
-                    <Menu
-                        id="simple-menu"
-                        key={index}
-                        anchorEl={item.status}
-                        keepMounted
-                        open={Boolean(item.status)}
-                        onClose={() => item.setStatus(null)}
-                        style={{ marginTop: item.style ? item.style : 30 }}
-                    >
-                        {item.menuElems.map((item, index) => (
-                            <Box key={index}>
-                                {item.href ?
-                                    <Link to={item.href} className={linkStyle} key={index}>
-                                        <MenuItem >{item.label}</MenuItem>
-                                    </Link>
-                                    : <MenuItem
-                                        aria-controls="simple-menu"
-                                        aria-haspopup="true"
-                                        className={linkStyle}
-                                        onClick={(e) => item.state(e.currentTarget)}
-                                    >
-                                        {item.label}
-                                    </MenuItem>}
-                            </Box>
-                        ))}
-                    </Menu>
-                ))}
             </div>
         )
     };
     return (
-        <header>
+        <div>
             <AppBar className={header} position="static">
                 {mobileView ? displayMobile() : displayDesktop()}
             </AppBar>
-        </header>
+        </div>
     );
 }

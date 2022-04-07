@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
     wContainer: {
-        background: 'linear-gradient(145.24deg, rgba(58, 113, 253, 0.25) 14.79%, rgba(183, 225, 255, 0) 61.66%), radial-gradient(46.05% 156.8% at 84.98% 128.33%, rgba(89, 106, 255, 0.25) 0%, rgba(68, 75, 255, 0) 100%), #B7E1FF',
+        background: '#B9DCB8',
         paddingBottom: 50
     },
     container: {
@@ -68,8 +68,8 @@ const StartBlog = () => {
             <Container className={classes.container}>
                 <Grid container>
                     <Grid item lg={6} xl={6} md={6} sm={12} xs={12} className={classes.GridItem}>
-                        <Typography variant="h3" className={classes.title}>Справочные телефоны: </Typography>
-                        <Typography variant="h6" className={classes.description}>Телефоны медецинских учреждений, горячей линиии, администрации, полезная информация </Typography>
+                        <Typography variant="h3" className={classes.title}>Контактный телефон (мессенджеры): </Typography>
+                        <Typography variant="h4" className={classes.title}>+7 (914) *** ** **</Typography>
                         <Box style={{ marginTop: 54 }}>
                             <Typography variant="h5" style={{ color: '#2A5FA7' }}>
                                 ПН-ПТ :

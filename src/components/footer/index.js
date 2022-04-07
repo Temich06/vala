@@ -30,33 +30,17 @@ export default function Footer(props) {
             title: 'ГЛАВНАЯ',
             options: [
                 {
-                    label: 'Новости',
-                    to: ''
-                },
-                {
-                    label: 'Блог',
-                    to: ''
-                },
-                {
                     label: 'F.A.Q (помощь)',
-                    to: ''
-                },
-                {
-                    label: 'Отчет',
-                    to: ''
+                    to: '/help'
                 },
             ]
         },
         {
-            title: 'ПАЛЛИАТИВНАЯ ПОМОЩЬ',
+            title: 'ВОЛОНТЁРСКАЯ ПОМОЩЬ',
             options: [
                 {
-                    label: 'Волонтерам',
+                    label: 'Вакансии Волонтерам',
                     to: '/valunteers'
-                },
-                {
-                    label: 'Вакансии',
-                    to: '/vacancy'
                 },
                 {
                     label: 'Контакты',
@@ -72,23 +56,6 @@ export default function Footer(props) {
                 },
             ]
         },
-        {
-            title: 'ДОКУМЕНТЫ',
-            options: [
-                {
-                    label: 'ОГРН',
-                    to: ''
-                },
-                {
-                    label: 'ИНН',
-                    to: ''
-                },
-                {
-                    label: 'УСТАВ',
-                    to: ''
-                },
-            ]
-        }
     ]
     return (
         <footer style={{ backgroundColor: '#313131', paddingTop: 50, paddingBottom: 50, color: 'white' }}>

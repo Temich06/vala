@@ -6,14 +6,14 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
     span: {
         marginLeft: 20,
-        color: '#245852'
+        color: '#378643'
     },
     gridInfo: {
         padding: 30,
         [theme.breakpoints.down('sm')]: {
             padding: 5
         },
-        color: '#2A5FA7'
+        color: '#378643'
     },
     gridRoot: {
         boxShadow: '1px 2px 15px rgba(0, 0, 0, 0.25)',
@@ -39,33 +39,21 @@ const TwoScreen = () => {
     const classes = useStyles()
     const data = [
         {
-            label: ' Главный врач:',
-            span: 'Афанасьева Лена Николаевна'
+            label: 'Директор:',
+            span: 'ФИО'
         },
         {
-            label: 'Адрес:',
+            label: 'e-mail:',
             span: 'г. Якутск, ул. Стадухина 81 корп. 1'
         },
         {
             label: 'e-mail:',
-            span: 'yarod@gov14.ru'
-        },
-        {
-            label: 'Факс:',
-            span: '(4112) 43-21-63'
+            span: 'rastaganstaniga1997@mail.ru'
         },
         {
             label: 'Сайт:',
-            span: 'onkosakha.ru'
+            span: 'volunteer-activity.com'
         },
-        {
-            label: 'Круглосуточная "горячая линия":',
-            span: '89142705379'
-        },
-        {
-            label: 'Телефон Всероссийской горячей линии помощи онкологическим больным:',
-            span: '+7 (800) 100 01 91'
-        }
     ]
     return (
         <Container className={classes.container}>
@@ -74,7 +62,7 @@ const TwoScreen = () => {
                     <img src={'/image/127.png'} style={{ width: '150%' }} />
                 </Grid>
                 <Grid className={classes.gridInfo} item lg={7} xl={7} md={7} sm={12} xs={12}>
-                    <Typography variant="h6">Якутский республиканский онкологический диспансер, г. Якутск ГБУ РС (Я) "Якутский республиканский онкологический диспансер"</Typography>
+                    <Typography variant="h4" style={{marginBottom: 20}}>Связь с волонтерской компанией</Typography>
                     {data.map((item, index) => (
                         <Typography variant="h6" style={{ fontWeight: 'normal', marginTop: 10 }} key={index}>{item.label}<span className={classes.span}>{item.span}</span></Typography>
                     ))}

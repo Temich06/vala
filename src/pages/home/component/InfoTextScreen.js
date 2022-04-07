@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        background: `url("/image/Vector158.png")`,
+        background: `url("/image/fon1.png")`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         marginBottom: 50,

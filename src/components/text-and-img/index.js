@@ -46,7 +46,7 @@ const TextAndImg = ({ img, title, descriptions, bottomLine }) => {
                         </Typography>
                         : ''}
                     {descriptions.map((item, index) => (
-                        <Typography variant="body1" style={{ marginBottom: 20 }} key={index}>
+                        <Typography variant="h6" style={{ marginBottom: 20 }} key={index}>
                             {item}
                         </Typography>
                     ))}

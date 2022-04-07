@@ -27,7 +27,7 @@ export default function CardTeam({ img, title, description }) {
     return (
         <Card className={classes.root}>
             <CardContent>
-                <Typography variant="h6" component="p" style={{ color: '#F2A340' }}>
+                <Typography variant="h6" component="p" style={{ color: '#6EB776' }}>
                     {title}
                 </Typography>
                 {description.map((item, index) => (

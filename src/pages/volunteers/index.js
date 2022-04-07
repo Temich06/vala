@@ -11,7 +11,7 @@ const Valunteers = () => {
         <Layout>
             <Container>
                 <Box style={{ paddingTop: 100, marginBottom: 100 }}>
-                    <PageHeader title="Волонтерам" description='это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.' />
+                    <PageHeader title="Волонтерам" />
                     <CommonCardConstructor data={DataVolunteers} />
                 </Box>
             </Container>
